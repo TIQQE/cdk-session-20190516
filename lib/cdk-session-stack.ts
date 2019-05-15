@@ -36,7 +36,7 @@ export class CdkSessionStack extends Stack {
       handler: 'index.lambda_handler',
       timeout: 30,
       runtime: Runtime.Python37,
-      logRetentionDays: 10
+      logRetentionDays: 14
     });
 
     const dynamofunc = new Function(this, 'MyDynamoDbFunc', {
