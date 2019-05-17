@@ -1,3 +1,7 @@
 {
-  "app": "node bin/cdk-session.js"
+  "app": "node bin/cdk-session.js",
+  "context": {
+    "bucket_name": "cdk-session-20190516-elz",
+    "table_name": "cdk-session-table-elz"
+  }
 }

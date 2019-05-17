@@ -1,4 +1,4 @@
-import {Construct, Stack, StackProps} from '@aws-cdk/cdk';
+import {Construct, RemovalPolicy, Stack, StackProps} from '@aws-cdk/cdk';
 import {SubnetType, VpcNetwork} from '@aws-cdk/aws-ec2';
 import {AttributeType, BillingMode, StreamViewType, Table} from '@aws-cdk/aws-dynamodb';
 import {Function, InlineCode, Runtime, StartingPosition} from '@aws-cdk/aws-lambda';
@@ -23,12 +23,13 @@ export class CdkSessionStack extends Stack {
         type: AttributeType.String
       },
       billingMode: BillingMode.PayPerRequest,
-      tableName: 'cdk-session-table',
+      tableName: this.node.getContext('table_name'),
       streamSpecification: StreamViewType.NewImage
     });
 
     const bucket = new Bucket(this, 'MyBucket', {
-      bucketName: 'cdk-session-bucket4711'
+      bucketName: this.node.getContext('bucket_name'),
+      removalPolicy: RemovalPolicy.Destroy   // Default is to retain bucket, but for this demo we delete bucket when stack is destroyed.
     });
 
     const s3func = new Function(this, 'MyS3Func', {
