@@ -10,17 +10,20 @@
     "cdk": "cdk"
   },
   "devDependencies": {
+    "@aws-cdk/aws-dynamodb": "^1.0.0",
+    "@aws-cdk/aws-ec2": "^1.0.0",
+    "@aws-cdk/aws-lambda": "^1.0.0",
+    "@aws-cdk/aws-lambda-event-sources": "^1.0.0",
+    "@aws-cdk/aws-s3": "^1.0.0",
+    "@aws-cdk/core": "^1.0.0",
+    "@aws-cdk/cx-api": "^1.0.0",
+    "@types/js-yaml": "^3.12.1",
     "@types/node": "8.10.45",
-    "typescript": "^3.3.3333",
-    "aws-cdk": "^0.31.0"
+    "aws-cdk": "^1.0.0",
+    "typescript": "^3.5.3"
   },
   "dependencies": {
-    "@aws-cdk/aws-dynamodb": "^0.31.0",
-    "@aws-cdk/aws-ec2": "^0.31.0",
-    "@aws-cdk/aws-lambda": "^0.31.0",
-    "@aws-cdk/aws-lambda-event-sources": "^0.31.0",
-    "@aws-cdk/aws-s3": "^0.31.0",
-    "@aws-cdk/cdk": "^0.31.0",
+    "js-yaml": "^3.13.1",
     "source-map-support": "^0.5.9"
   }
 }

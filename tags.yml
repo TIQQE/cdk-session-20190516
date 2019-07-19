@@ -1,0 +1,4 @@
+test:
+  Owner: 'Miriam Magic :: mmagic@example.com'
+  ApplicationId: '123132132132123'
+  Description: Test of tagging resources through AWS CDK

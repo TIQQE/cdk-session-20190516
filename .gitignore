@@ -5,3 +5,6 @@ node_modules
 
 # CDK asset staging directory
 .cdk.staging
+/cdk.out/cdk.out
+/cdk.out/CdkSessionStack.template.json
+/cdk.out/manifest.json
